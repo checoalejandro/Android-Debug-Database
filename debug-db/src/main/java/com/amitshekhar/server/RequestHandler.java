@@ -193,7 +193,7 @@ public class RequestHandler {
         TableDataResponse response;
 
         if (isDbOpened) {
-            String sql = "SELECT * FROM " + tableName;
+            String sql = "SELECT * FROM [" + tableName + "]";
             response = DatabaseHelper.getTableData(mDatabase, sql, tableName);
         } else {
             response = PrefHelper.getAllPrefData(mContext, tableName);
